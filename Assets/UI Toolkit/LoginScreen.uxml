@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/style.uss?fileID=7433441132597879392&amp;guid=55200ad7095c00a4dbab5c2c500844f6&amp;type=3#style" />
+    <ui:VisualElement name="loginScreen" class="login-screen">
+        <ui:VisualElement class="login-card">
+            <ui:Label text="PLATAFORMA DE NAVEGACIÓN 3D" class="login-title" style="-unity-text-align: upper-center; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Bold.ttf?fileID=12800000&amp;guid=9d1b7ecf80c7078439ce30b25cc339fb&amp;type=3#Urbanist-Bold&quot;);" />
+            <ui:Label text="Investigación de orientación espacial - UNDC" class="login-subtitle" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Regular.ttf?fileID=12800000&amp;guid=1f154b8778e59d64a9eea6150ec614be&amp;type=3#Urbanist-Regular&quot;);" />
+            <ui:VisualElement class="login-input-group" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Regular.ttf?fileID=12800000&amp;guid=1f154b8778e59d64a9eea6150ec614be&amp;type=3#Urbanist-Regular&quot;);">
+                <ui:Label text="CÓDIGO DE ESTUDIANTE / DNI" class="input-label" />
+                <ui:TextField name="studentIdField" placeholder-text="Ingrese su código..." class="login-field" />
+            </ui:VisualElement>
+            <ui:VisualElement class="login-input-group" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Regular.ttf?fileID=12800000&amp;guid=1f154b8778e59d64a9eea6150ec614be&amp;type=3#Urbanist-Regular&quot;);">
+                <ui:Label text="GRUPO ASIGNADO" class="input-label" />
+                <ui:RadioButtonGroup name="groupToggle" class="login-radio-group">
+                    <ui:RadioButton label="CONTROL" />
+                    <ui:RadioButton label="EXPERIMENTAL" />
+                </ui:RadioButtonGroup>
+            </ui:VisualElement>
+            <ui:Button name="btnStartSession" text="INICIAR SESIÓN" class="login-button" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Bold.ttf?fileID=12800000&amp;guid=9d1b7ecf80c7078439ce30b25cc339fb&amp;type=3#Urbanist-Bold&quot;);" />
+            <ui:Label text="© 2026 Universidad Nacional de Cañete" class="login-footer" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Medium.ttf?fileID=12800000&amp;guid=e9e6b3ae89e20cc4cb1db97e310d41ec&amp;type=3#Urbanist-Medium&quot;); font-size: 14px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

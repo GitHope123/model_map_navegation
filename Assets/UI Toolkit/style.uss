@@ -1,0 +1,477 @@
+/* DESIGN TOKENS */
+:root {
+    --color-bg-panel: rgba(15, 23, 42, 0.95);
+    --color-bg-card: rgba(30, 41, 59, 0.4);
+    --color-accent: #3b82f6;
+    --color-accent-hover: #2563eb;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: rgba(248, 250, 252, 0.6);
+    --border-radius: 7px;
+    --border-light: rgba(255, 255, 255, 0.12);
+}
+
+/* CONTAINER PRINCIPAL */
+.nav-container {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 320px;
+}
+
+/* TOP ROW (BUSCADOR + HAMBURGUESA) */
+.top-row {
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.search-container {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-bg-panel);
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    border-color: var(--border-light);
+    padding: 0 12px;
+    height: 48px;
+}
+
+.icon-search {
+    width: 18px;
+    height: 18px;
+    background-image: url("project://database/Assets/textures/icons/icon_search.png");
+    -unity-background-image-tint-color: var(--color-text-secondary);
+    margin-right: 8px;
+}
+
+.search-field {
+    flex-grow: 1;
+    background-color: transparent;
+    border-width: 0;
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.search-field .unity-text-field__input {
+    background-color: transparent;
+    border-width: 0;
+    color: var(--color-text-primary);
+    padding: 0;
+}
+
+.hamburger-button {
+    width: 48px;
+    height: 48px;
+    background-color: #1e293b;
+    color: white;
+    font-size: 22px;
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    border-color: var(--border-light);
+    margin-left: 10px;
+    transition-property: background-color, border-color, scale;
+    transition-duration: 0.2s;
+}
+
+.hamburger-button:hover {
+    background-color: #334155;
+    border-color: var(--color-accent);
+    scale: 1.05;
+}
+
+/* MENU DE DESTINOS (DERECHA) */
+.menu-container {
+    background-color: var(--color-bg-panel);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    border-width: 1px;
+    border-color: var(--border-light);
+    max-height: 500px;
+}
+
+.menu-title {
+    color: var(--color-text-primary);
+    font-size: 16px;
+    -unity-font-style: bold;
+    margin-bottom: 16px;
+    border-bottom-width: 1px;
+    border-color: rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+.destinations-scroll {
+    flex-grow: 1;
+}
+
+.area-card {
+    margin-bottom: 16px;
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border-width: 1px;
+    border-color: var(--border-light);
+}
+
+.area-preview {
+    height: 110px;
+    width: 100%;
+    background-color: #000;
+}
+
+.nav-button {
+    height: 40px;
+    margin: 8px;
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+    border-width: 0;
+    color: white;
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+
+/* PANEL DE INFORMACION (IZQUIERDA - PREMIUM CARD) */
+.info-panel {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 280px;
+}
+
+.info-card {
+    background-color: var(--color-bg-panel);
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    border-color: var(--border-light);
+    padding: 20px;
+}
+
+.info-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.header-left {
+    flex-direction: row;
+    align-items: center;
+}
+
+.info-title {
+    color: var(--color-text-secondary);
+    font-size: 10px;
+    -unity-font-style: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.icon-nav {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    -unity-background-image-tint-color: var(--color-accent);
+}
+
+.cancel-button {
+    width: 26px;
+    height: 26px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    border-width: 0;
+    padding: 6px;
+}
+
+.icon-cancel {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/textures/icons/icon_cancel.png");
+    -unity-background-image-tint-color: white;
+}
+
+.info-card-body {
+    margin-bottom: 12px;
+}
+
+.info-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-pin {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    -unity-background-image-tint-color: white;
+}
+
+.info-text {
+    color: var(--color-text-primary);
+    font-size: 16px;
+    -unity-font-style: bold;
+    flex-grow: 1;
+    white-space: normal; /* Permitir ajuste de texto */
+}
+
+.icon-arrow {
+    width: 22px;
+    height: 22px;
+    -unity-background-image-tint-color: var(--color-accent);
+}
+
+.dist-time-row {
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: 28px;
+}
+
+.info-distance {
+    color: var(--color-accent);
+    font-size: 26px;
+    -unity-font-style: bold;
+}
+
+.info-eta {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    margin-left: 12px;
+}
+
+.info-card-footer {
+    border-top-width: 1px;
+    border-color: rgba(255, 255, 255, 0.05);
+    padding-top: 16px;
+}
+
+.progress-container {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--color-accent);
+}
+
+/* LOGIN SCREEN - REDISEÑO PROFESIONAL */
+.login-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #020617; /* Slate-950 puro */
+}
+
+.login-card {
+    width: 440px;
+    background-color: var(--color-bg-panel);
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: var(--border-light);
+    padding: 48px;
+    align-items: center;
+}
+
+.login-title {
+    color: var(--color-text-primary);
+    font-size: 20px;
+    -unity-font-style: bold;
+    margin-bottom: 8px;
+    text-align: center;
+    white-space: normal;
+}
+
+.login-subtitle {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    margin-bottom: 40px;
+    text-align: center;
+    white-space: normal;
+}
+
+.login-input-group {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.input-label {
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.login-field {
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0 16px;
+}
+
+.login-field .unity-text-field__input {
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    padding: 0;
+    font-size: 14px;
+}
+
+.login-toggle {
+    margin-top: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.05);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.login-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.login-toggle .unity-toggle__text {
+    color: var(--color-text-primary);
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.login-toggle .unity-toggle__checkmark {
+    background-color: var(--color-bg-card);
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: var(--border-light);
+    width: 20px;
+    height: 20px;
+}
+
+.login-toggle :checked > .unity-toggle__checkmark {
+    background-color: var(--color-accent);
+    -unity-background-image-tint-color: white;
+}
+
+.login-button {
+    width: 100%;
+    height: 52px;
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 8px;
+    border-width: 0;
+    -unity-font-style: bold;
+    font-size: 15px;
+    margin-top: 24px;
+    transition-property: background-color, scale;
+    transition-duration: 0.2s;
+}
+
+.login-button:hover {
+    background-color: var(--color-accent-hover);
+    scale: 1.02;
+}
+
+.login-footer {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 11px;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.login-notification {
+    display: none;
+    width: 100%;
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgba(239, 68, 68, 0.3);
+    padding: 10px;
+    font-size: 12px;
+    -unity-text-align: middle-center;
+    margin-top: 10px;
+    white-space: normal;
+}
+/* SUCCESS PANEL (DESTINO ALCANZADO) */
+.success-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(15, 23, 42, 0.85); /* Deep slate semi-transparent */
+}
+
+.success-card {
+    width: 360px;
+    background-color: var(--color-bg-panel);
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: rgba(34, 197, 94, 0.3); /* Green border subtle */
+    padding: 32px;
+    align-items: center;
+    border-bottom-width: 4px;
+    border-bottom-color: #22c55e;
+}
+
+.success-icon-container {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(34, 197, 94, 0.1);
+    border-radius: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-check {
+    width: 32px;
+    height: 32px;
+    -unity-background-image-tint-color: #22c55e;
+}
+
+.success-title {
+    color: #22c55e;
+    font-size: 18px;
+    -unity-font-style: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Urbanist-Bold.ttf?fileID=12800000&guid=9d1b7ecf80c7078439ce30b25cc339fb&type=3#Urbanist-Bold");
+}
+
+.success-message {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 24px;
+    white-space: normal;
+}
+
+.success-button {
+    width: 100%;
+    height: 44px;
+    background-color: #22c55e;
+    color: white;
+    border-radius: 8px;
+    border-width: 0;
+    -unity-font-style: bold;
+    font-size: 14px;
+    transition-property: background-color, scale;
+    transition-duration: 0.2s;
+}
+
+.success-button:hover {
+    background-color: #16a34a;
+    scale: 1.05;
+}

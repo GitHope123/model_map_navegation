@@ -1,0 +1,82 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/style.uss?fileID=7433441132597879392&amp;guid=55200ad7095c00a4dbab5c2c500844f6&amp;type=3#style" />
+    <ui:VisualElement name="loginScreen" class="login-screen" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Bold.ttf?fileID=12800000&amp;guid=9d1b7ecf80c7078439ce30b25cc339fb&amp;type=3#Urbanist-Bold&quot;);">
+        <ui:VisualElement class="login-card">
+            <ui:Label text="PLATAFORMA DE NAVEGACIÓN 3D" class="login-title" style="-unity-text-align: upper-center;" />
+            <ui:Label text="Investigación de Orientación Espacial - UNDC" class="login-subtitle" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Medium.ttf?fileID=12800000&amp;guid=e9e6b3ae89e20cc4cb1db97e310d41ec&amp;type=3#Urbanist-Medium&quot;);" />
+            <ui:VisualElement class="login-input-group" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Medium.ttf?fileID=12800000&amp;guid=e9e6b3ae89e20cc4cb1db97e310d41ec&amp;type=3#Urbanist-Medium&quot;);">
+                <ui:Label text="CÓDIGO DE ESTUDIANTE / DNI" class="input-label" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Regular.ttf?fileID=12800000&amp;guid=1f154b8778e59d64a9eea6150ec614be&amp;type=3#Urbanist-Regular&quot;);" />
+                <ui:TextField name="studentIdField" placeholder-text="Ingrese su código..." class="login-field" />
+            </ui:VisualElement>
+            <ui:VisualElement class="login-input-group" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Regular.ttf?fileID=12800000&amp;guid=1f154b8778e59d64a9eea6150ec614be&amp;type=3#Urbanist-Regular&quot;);">
+                <ui:Label text="MODO DE EXPLORACIÓN" class="input-label" />
+                <ui:Toggle name="groupToggle" label="Habilitar Guía Visual" class="login-toggle" />
+            </ui:VisualElement>
+            <ui:Label name="loginNotification" text="Mensaje de error" class="login-notification" />
+            <ui:Button name="btnStartSession" text="COMENZAR EVALUACIÓN" class="login-button" />
+            <ui:Label text="© 2026 Universidad Nacional de Cañete" class="login-footer" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="nav-container" class="nav-container" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Medium.ttf?fileID=12800000&amp;guid=e9e6b3ae89e20cc4cb1db97e310d41ec&amp;type=3#Urbanist-Medium&quot;);">
+        <ui:VisualElement class="top-row">
+            <ui:VisualElement class="search-container">
+                <ui:VisualElement class="icon-search" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/icons/icon_search.svg?fileID=7388822144124034973&amp;guid=26297e1b451a38a428ce7be5dca9de6f&amp;type=3#icon_search&quot;);" />
+                <ui:TextField name="searchField" placeholder-text="Buscar destino..." class="search-field" />
+            </ui:VisualElement>
+            <ui:Button name="btnToggleMenu" text="≡" class="hamburger-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="menuContainer" class="menu-container">
+            <ui:Label text="Destinos Disponibles" class="menu-title" />
+            <ui:ScrollView class="destinations-scroll">
+                <ui:VisualElement name="cardArea1" class="area-card">
+                    <ui:VisualElement name="imgArea1" class="area-preview" style="-unity-background-scale-mode: scale-and-crop; background-size: cover; background-image: url(&quot;project://database/Assets/RT_Oficinas.renderTexture?fileID=8400000&amp;guid=c12abd44f3e46cd42b316b32c9c115b6&amp;type=2#RT_Oficinas&quot;);" />
+                    <ui:Button name="btnArea1" text="Área de Recepción" class="nav-button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cardArea2" class="area-card">
+                    <ui:VisualElement name="imgArea2" class="area-preview" style="background-image: url(&quot;project://database/Assets/RT_Recepcion.renderTexture?fileID=8400000&amp;guid=6fa0092fe87e2d141a9d0bebfce1cf01&amp;type=2#RT_Recepcion&quot;);" />
+                    <ui:Button name="btnArea2" text="Oficinas Centrales" class="nav-button" />
+                </ui:VisualElement>
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="infoPanel" class="info-panel">
+        <ui:VisualElement class="info-card" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Urbanist-Medium.ttf?fileID=12800000&amp;guid=e9e6b3ae89e20cc4cb1db97e310d41ec&amp;type=3#Urbanist-Medium&quot;);">
+            <ui:VisualElement class="info-header">
+                <ui:VisualElement class="header-left">
+                    <ui:VisualElement class="icon-nav" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/icons/icon_info.svg?fileID=7388822144124034973&amp;guid=efd67eb46fc76a743a98ca3b126a92e2&amp;type=3#icon_info&quot;);" />
+                    <ui:Label text="Navegación Activa" class="info-title" />
+                </ui:VisualElement>
+                <ui:Button name="btnCancelNav" class="cancel-button">
+                    <ui:VisualElement class="icon-cancel" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/icons/icon_close.svg?fileID=7388822144124034973&amp;guid=bb9b6ec4eb1630e4faa245bb98cbdaa2&amp;type=3#icon_close&quot;);" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement class="info-card-body">
+                <ui:VisualElement class="info-row">
+                    <ui:VisualElement class="icon-pin" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/icons/icon_destino.svg?fileID=7388822144124034973&amp;guid=e6cfec99afb70b441946eebbf06ec88a&amp;type=3#icon_destino&quot;);" />
+                    <ui:Label name="lblStatus" text="Sin destino" class="info-text" />
+                    <ui:VisualElement name="iconArrow" class="icon-arrow" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/icons/icon_arrow.svg?fileID=7388822144124034973&amp;guid=dfa5c99d3a06a7742b45cdccce838d92&amp;type=3#icon_arrow&quot;);" />
+                </ui:VisualElement>
+                <ui:VisualElement class="dist-time-row">
+                    <ui:Label name="lblDistance" text="-- m" class="info-distance" />
+                    <ui:Label name="lblETA" text="-- seg" class="info-eta" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="info-card-footer">
+                <ui:VisualElement class="progress-container">
+                    <ui:VisualElement name="progressBarFill" class="progress-bar-fill" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <!-- PANEL DE ÉXITO AL LLEGAR -->
+    <ui:VisualElement name="successPanel" class="success-overlay" style="display: none;">
+        <ui:VisualElement class="success-card">
+            <ui:VisualElement class="success-icon-container">
+                <ui:VisualElement class="icon-check" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/icons/icon_info.svg?fileID=7388822144124034973&amp;guid=efd67eb46fc76a743a98ca3b126a92e2&amp;type=3#icon_info&quot;);" />
+            </ui:VisualElement>
+            <ui:Label text="¡DESTINO ALCANZADO!" class="success-title" />
+            <ui:Label name="lblSuccessTarget" text="Has llegado a tu destino con éxito." class="success-message" />
+            <ui:Button name="btnCloseSuccess" text="CONTINUAR" class="success-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
